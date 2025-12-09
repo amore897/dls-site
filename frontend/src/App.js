@@ -394,18 +394,11 @@ const Home = () => {
                 </div>
 
                 <button
-                  onClick={() => handleCheckout('price_1Sc7i1EHXyPNVNw4T7xQEOWT', 'Store')}
-                  disabled={loading['price_1Sc7i1EHXyPNVNw4T7xQEOWT']}
+                  onClick={() => handleCheckout('https://donate.stripe.com/14AaEX7LY8xV4qU8ht', 'Store')}
                   data-testid="store-plan-button"
-                  className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-pink-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 shadow-lg shadow-purple-500/30"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-pink-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-purple-500/30"
                 >
-                  {loading['price_1Sc7i1EHXyPNVNw4T7xQEOWT'] ? (
-                    <span>Processing...</span>
-                  ) : (
-                    <>
-                      <span>🛒 Pre-order as Store – $1,000</span>
-                    </>
-                  )}
+                  <span>🛒 Pre-order as Store – $1,000</span>
                 </button>
               </div>
             </div>
