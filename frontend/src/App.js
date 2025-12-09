@@ -15,28 +15,8 @@ const API = `${BACKEND_URL}/api`;
 let stripePromise = null;
 
 const Home = () => {
-  const [stripePublishableKey, setStripePublishableKey] = useState('');
-  const [loading, setLoading] = useState({});
-
-  useEffect(() => {
-    // Fetch Stripe publishable key
-    const fetchConfig = async () => {
-      try {
-        const response = await axios.get(`${API}/config`);
-        const key = response.data.stripe_publishable_key;
-        setStripePublishableKey(key);
-        if (key) {
-          stripePromise = loadStripe(key);
-        }
-      } catch (error) {
-        console.error('Failed to fetch config:', error);
-      }
-    };
-    fetchConfig();
-  }, []);
-
-  const handleCheckout = (paymentLink, planName) => {
-    // Direct redirect to Stripe Payment Link
+  const handleCheckout = (paymentLink) => {
+    // Direct redirect to Stripe Payment Link - No backend needed!
     window.location.href = paymentLink;
   };
 
