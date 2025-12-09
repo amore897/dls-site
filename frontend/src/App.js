@@ -35,24 +35,9 @@ const Home = () => {
     fetchConfig();
   }, []);
 
-  const handleCheckout = async (priceId, planName) => {
-    setLoading(prev => ({ ...prev, [priceId]: true }));
-    try {
-      const response = await axios.post(`${API}/create-checkout-session`, {
-        price_id: priceId,
-        success_url: window.location.origin + '/success',
-        cancel_url: window.location.origin + '/cancel'
-      });
-
-      if (response.data.checkout_url) {
-        window.location.href = response.data.checkout_url;
-      }
-    } catch (error) {
-      console.error('Checkout error:', error);
-      alert('Unable to process checkout. Please ensure Stripe is configured.');
-    } finally {
-      setLoading(prev => ({ ...prev, [priceId]: false }));
-    }
+  const handleCheckout = (paymentLink, planName) => {
+    // Direct redirect to Stripe Payment Link
+    window.location.href = paymentLink;
   };
 
   return (
