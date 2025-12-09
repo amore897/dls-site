@@ -363,18 +363,11 @@ const Home = () => {
                 </div>
 
                 <button
-                  onClick={() => handleCheckout('price_1Sc7duEHXyPNVNw4cCOJ2BUl', 'Maker')}
-                  disabled={loading['price_1Sc7duEHXyPNVNw4cCOJ2BUl']}
+                  onClick={() => handleCheckout('https://donate.stripe.com/cNidR91nA6pN9LecxJ', 'Maker')}
                   data-testid="maker-plan-button"
-                  className="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-lg hover:from-green-700 hover:to-emerald-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 shadow-lg shadow-green-500/30"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-lg hover:from-green-700 hover:to-emerald-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-green-500/30"
                 >
-                  {loading['price_1Sc7duEHXyPNVNw4cCOJ2BUl'] ? (
-                    <span>Processing...</span>
-                  ) : (
-                    <>
-                      <span>🧮 Pre-order as Maker – $300</span>
-                    </>
-                  )}
+                  <span>🧮 Pre-order as Maker – $300</span>
                 </button>
               </div>
             </div>
