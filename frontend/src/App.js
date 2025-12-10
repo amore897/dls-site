@@ -374,7 +374,7 @@ const Home = () => {
                 </div>
 
                 <button
-                  onClick={() => handleCheckout('https://donate.stripe.com/28E9AT1nAaG3bTmeFR7ss00', 'Store')}
+                  onClick={() => handleCheckout('https://donate.stripe.com/14AaEX7LY8xV4qU8ht7ss02')}
                   data-testid="store-plan-button"
                   className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-pink-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-purple-500/30"
                 >
